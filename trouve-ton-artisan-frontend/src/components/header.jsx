@@ -38,31 +38,31 @@ export default function Header() {
                     <img src={logo} alt="Logo Trouve ton artisan" style={{ height: '35px', objectFit: 'contain' }} />
                 </Link>
 
-                {/* Navigation */}
-                <nav className="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-4">
-                    <Link to="/" className="text-white text-decoration-none fw-bold px-2">Accueil</Link>
+                {/* Navigation sur une seule ligne (flex-nowrap) */}
+                <nav className="d-flex flex-nowrap align-items-center gap-3 overflow-auto py-1">
+                    <Link to="/" className="text-white text-decoration-none fw-bold px-2 text-nowrap">Accueil</Link>
                     {categories.map((cat) => (
                         <Link 
                             key={cat.id} 
                             to={`/artisans?categorieId=${cat.id}`} 
-                            className="text-white text-decoration-none fw-bold px-2"
+                            className="text-white text-decoration-none fw-bold px-2 text-nowrap"
                         >
                             {cat.nom}
                         </Link>
                     ))}
                 </nav>
 
-                {/* Barre de recherche */}
-                <form onSubmit={handleSearchSubmit} className="d-flex align-items-center w-100 w-md-auto">
+                {/* Barre de recherche plus compacte */}
+                <form onSubmit={handleSearchSubmit} className="d-flex align-items-center" style={{ width: '220px' }}>
                     <div className="input-group input-group-sm">
                         <input 
                             type="text" 
                             className="form-control" 
-                            placeholder="Rechercher un artisan..." 
+                            placeholder="Rechercher..." 
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <button className="btn btn-light px-3" type="submit" title="Rechercher">
+                        <button className="btn btn-light px-2" type="submit" title="Rechercher">
                             🔍
                         </button>
                     </div>
