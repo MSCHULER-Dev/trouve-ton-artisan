@@ -31,38 +31,38 @@ export default function Header() {
 
     return (
         <header className="bg-primary shadow-sm py-3 mb-4">
-            <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <div className="container d-flex align-items-center justify-content-between flex-wrap flex-lg-nowrap gap-3">
                 
-                {/* Logo */}
+                {/* 1. Logo à gauche */}
                 <Link to="/" className="bg-white px-3 py-2 rounded shadow-sm d-flex align-items-center text-decoration-none">
                     <img src={logo} alt="Logo Trouve ton artisan" style={{ height: '35px', objectFit: 'contain' }} />
                 </Link>
 
-                {/* Navigation sur une seule ligne (flex-nowrap) */}
-                <nav className="d-flex flex-nowrap align-items-center gap-3 overflow-auto py-1">
-                    <Link to="/" className="text-white text-decoration-none fw-bold px-2 text-nowrap">Accueil</Link>
+                {/* 2. Navigation au centre sur la même ligne */}
+                <nav className="d-flex align-items-center gap-4 flex-wrap justify-content-center">
+                    <Link to="/" className="text-white text-decoration-none fw-semibold">Accueil</Link>
                     {categories.map((cat) => (
                         <Link 
                             key={cat.id} 
                             to={`/artisans?categorieId=${cat.id}`} 
-                            className="text-white text-decoration-none fw-bold px-2 text-nowrap"
+                            className="text-white text-decoration-none fw-semibold"
                         >
                             {cat.nom}
                         </Link>
                     ))}
                 </nav>
 
-                {/* Barre de recherche plus compacte */}
-                <form onSubmit={handleSearchSubmit} className="d-flex align-items-center" style={{ width: '220px' }}>
+                {/* 3. Barre de recherche à droite */}
+                <form onSubmit={handleSearchSubmit} className="d-flex align-items-center" style={{ width: '240px' }}>
                     <div className="input-group input-group-sm">
                         <input 
                             type="text" 
                             className="form-control" 
-                            placeholder="Rechercher..." 
+                            placeholder="Rechercher un artisan..." 
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <button className="btn btn-light px-2" type="submit" title="Rechercher">
+                        <button className="btn btn-light px-3" type="submit" title="Rechercher">
                             🔍
                         </button>
                     </div>
