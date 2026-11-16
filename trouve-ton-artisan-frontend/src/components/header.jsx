@@ -31,7 +31,6 @@ export default function Header() {
 
     return (
         <header className="bg-primary shadow-sm py-3 mb-4">
-            {/* Utilisation de flex-column sur mobile et flex-md-row sur tablette/desktop */}
             <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                 
                 {/* Logo */}
@@ -39,7 +38,7 @@ export default function Header() {
                     <img src={logo} alt="Logo Trouve ton artisan" style={{ height: '35px', objectFit: 'contain' }} />
                 </Link>
 
-                {/* Navigation : passage à la ligne automatique (flex-wrap) et centrage sur mobile */}
+                {/* Navigation */}
                 <nav className="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-4">
                     <Link to="/" className="text-white text-decoration-none fw-bold px-2">Accueil</Link>
                     {categories.map((cat) => (
@@ -53,7 +52,7 @@ export default function Header() {
                     ))}
                 </nav>
 
-                {/* Barre de recherche : largeur 100% sur mobile, auto sur grand écran */}
+                {/* Barre de recherche */}
                 <form onSubmit={handleSearchSubmit} className="d-flex align-items-center w-100 w-md-auto">
                     <div className="input-group input-group-sm">
                         <input 
