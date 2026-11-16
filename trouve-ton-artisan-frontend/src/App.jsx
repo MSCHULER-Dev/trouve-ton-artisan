@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import ArtisansList from './pages/ArtisansList';
-import ArtisanDetail from './pages/ArtisanDetail';
-import MentionsLegales from './pages/MentionsLegales';
-import DonneesPersonnelles from './pages/DonneesPersonnelles';
-import Accessibilite from './pages/Accessibilite';
-import NotFound from './pages/NotFound';
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './pages/home';
+import ArtisansList from './pages/artisansList';
+import ArtisanDetail from './pages/artisandetail';
+import MentionsLegales from './pages/mentionslegales';
+import DonneesPersonnelles from './pages/donneesPersonnelles';
+import Accessibilite from './pages/accessibilite';
+import NotFound from './pages/notfound';
 
 export default function App() {
     return (
