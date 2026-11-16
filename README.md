@@ -2,12 +2,17 @@
 
 Plateforme dédiée aux particuliers pour trouver et contacter facilement un artisan de la région. Ce projet est divisé en deux parties : un front-end en React.js (Vite) et une API back-end sous Node.js/Express avec une base de données MySQL.
 
+## 🔗 Lien de l'application en ligne
+- **Site web hébergé (Front-end) :** [https://trouve-ton-artisan-frontend-yigt.onrender.com/](https://trouve-ton-artisan-frontend-yigt.onrender.com/)
+
+---
+
 ## Prérequis
 - Node.js (version 16 ou supérieure)
 - Serveur MySQL (ex: WAMP, XAMPP, ou serveur dédié)
 - Git
 
-## Installation et lancement
+## Installation et lancement en local
 
 ### 1. Base de données
 - Créez une base de données nommée `trouve_ton_artisan` dans votre environnement MySQL.
