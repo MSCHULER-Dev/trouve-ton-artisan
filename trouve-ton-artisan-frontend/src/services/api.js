@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-// Cette ligne s'adapte toute seule : si tu es sur ton PC, elle utilise localhost, 
-// et si tu es en ligne, elle utilise ton serveur Render !
 const API_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api'
     : 'https://trouve-ton-artisan-vhxj.onrender.com/api';
