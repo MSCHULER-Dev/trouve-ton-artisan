@@ -1,0 +1,26 @@
+// 1. Définition des couleurs officielles du projet
+$bleu-clair: #0074c7;
+$bleu-fonce: #00497c;
+$gris-fond: #f1f1f1;
+$texte-gris: #384050;
+$bordure-verte: #acd2c2;
+$vert-succes: #82b864;
+
+// 2. Surcharge des variables Bootstrap avec les couleurs officielles
+$primary: $bleu-clair;
+$secondary: $bleu-fonce;
+$body-bg: $gris-fond;
+$body-color: $texte-gris;
+
+// 3. Importation de Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// 4. Styles personnalisés additionnels
+.artisan-card {
+    border: 1px solid $bordure-verte;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+}
